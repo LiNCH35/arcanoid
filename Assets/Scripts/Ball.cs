@@ -52,6 +52,7 @@ public class Ball : MonoBehaviour {
                 transform.localPosition = new Vector3(transform.localPosition.x, 7.0f, transform.localPosition.z);
                 rb2D.simulated = false;
             }
+            racket.GetComponent<Racket>().woveDown();
         }
         // Hit the bottom
         else if (col.gameObject.name == "border_bottom")

@@ -7,6 +7,7 @@ public class Racket : MonoBehaviour {
     
     // Movement Speed
     public float speed = 150;
+    public int moveDownSpeed = 10;
     public GameObject buttonStart;
 
     private Rigidbody2D rb2D;
@@ -73,6 +74,11 @@ public class Racket : MonoBehaviour {
         if (!goToRight) h = -1;
         rb2D.AddForce(new Vector2(h * speed, 0)); Debug.Log("You have clicked the button!");
     }*/
+
+    public void woveDown()
+    {
+        transform.position = new Vector2(transform.position.x, transform.position.y - moveDownSpeed);
+    }
 
     public void BallStart() {
         if ( transform.childCount != 0)
