@@ -516,5 +516,14 @@ public class Levels : MonoBehaviour {
             racket.GetComponent<Racket>().StartPosition();
 
         }
+
+        GameObject background = GameObject.Find("hexagon_pattern");
+
+        if (background)
+        {
+            SpriteRenderer spriteRenderer = background.gameObject.GetComponent<SpriteRenderer>();
+
+            spriteRenderer.color = Random.ColorHSV(0f, 0.25f);
+        }
     }
 }
